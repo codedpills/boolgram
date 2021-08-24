@@ -14,7 +14,7 @@
 
 .profile__info img {
   border-radius: 100%;
-  padding-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .profile__info .text p {

@@ -14,7 +14,11 @@ const Profile = ({
   return (
     <div className="profile_">
       <div className="profile__info">
-        <img src={image.path} alt={instaHandle} height={`${image.height}px`} />
+        <img
+          src={image.path}
+          alt={instaHandle}
+          style={{ height: `${image.height}px`, width: `${image.height}px` }}
+        />
         <div className="text">
           <h5>{instaHandle}</h5>
           <p>{complimentaryText}</p>
