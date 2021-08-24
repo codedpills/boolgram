@@ -1,0 +1,21 @@
+.suggestions {
+    margin-top: 0.5rem;
+    margin-bottom: 2px;
+}
+
+.suggestions__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestions__heading h4 {
+  color: var(--custom-accent-text-main);
+}
+
+.suggestions__heading a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: inherit;
+}
