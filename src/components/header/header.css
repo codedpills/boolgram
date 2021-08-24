@@ -1,0 +1,28 @@
+.header-wrapper {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--custom-border-gray);
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 935px;
+    display: flex;
+}
+
+.header__brand {
+    width: 35%;
+}
+
+.header__navs {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar {
+    width: 40%;
+}
+
+.icons-bar {
+    width: 40%;
+}
