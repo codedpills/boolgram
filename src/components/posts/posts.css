@@ -1,11 +1,15 @@
 .posts {
   margin-top: 1.5rem;
-  padding: 0 0.5rem;
-  width: 100%;
-  min-height: 300px;
+}
+
+.post {
   background-color: #fff;
+  margin: 1rem 0;
+  min-height: 300px;
+  width: 100%;
   border: 1px solid var(--custom-border-gray);
   border-radius: 4px;
+  padding: 0 0.5rem;
 }
 
 .posts-header {
@@ -50,6 +54,12 @@
   min-height: 200px;
 }
 
+.posts-body__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 .posts-body__comments--icons {
   display: flex;
   justify-content: space-between;
@@ -64,39 +74,49 @@
 }
 
 .posts-body__comments--text .likes {
-    font-size: 18px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .posts-body__comments--text .likes h5 {
-    margin: 1px 0;
+  margin: 1px 0;
 }
 
 .posts-body__comments--text .comment {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.posts-body__comments--text .comment h5 {
+  margin: 4px 0;
+}
+
+.posts-body__comments--text .comment p {
+  margin: 4px 0;
 }
 
 .posts-body__comments--text .comment > .handle {
-    margin-right: 0.5rem;
-    font-size: 18px;
+  margin-right: 0.5rem;
+  font-size: 18px;
 }
 
 .posts-body__comments--text .comment > .handle h5 {
-    margin: 1px 0;
+  margin: 1px 0;
 }
 
 .posts-body__comments--text .comment > .comment {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .posts-body__comments--text .time {
-    text-transform: uppercase;
-    color: var(--custom-accent-text-main);
-    font-size: 12px;
+  text-transform: uppercase;
+  color: var(--custom-accent-text-main);
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 .posts-body__comments--text .time h5 {
-    margin: 1px 0 12px 0;
+  margin: 1px 0 12px 0;
 }
 
 .posts-footer {
