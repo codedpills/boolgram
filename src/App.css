@@ -1,6 +1,7 @@
 :root {
     --custom-bg-gray: #fafafa;
     --custom-link-blue: #0095f6;
+    --custom-link-blue-disabled: #0094f683;
     --custom-border-gray: #dbdbdb;
     --custom-accent-text-main: #8e8e8e;
 }
