@@ -8,11 +8,11 @@ import "./stories.css";
 
 const Stories = () => {
   const [stories, setStories] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getStories().then((stories) => setStories(stories));
-    setLoading(false);
+    setIsLoading(false);
   }, []);
 
   const storiesList = stories.map((story, idx) => (
@@ -25,7 +25,7 @@ const Stories = () => {
 
   return (
     <section className="stories">
-      {!loading && stories.length > 0 ? storiesList : "loading..."}
+      {!isLoading && stories.length > 0 ? storiesList : "loading..."}
     </section>
   );
 };
