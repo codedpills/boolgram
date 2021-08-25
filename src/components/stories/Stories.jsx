@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-import StoryItem from './StoryItem';
+import { getStories } from "../../services/stories";
 
-import './stories.css';
+import StoryItem from "./StoryItem";
 
-import zak from '../../assets/images/zak.png'
+import "./stories.css";
 
 const Stories = () => {
-    return (
-        <section className="stories">
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-            <StoryItem imageUrl={zak} />
-        </section>
-    );
-}
+  const [stories, setStories] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getStories().then((stories) => setStories(stories));
+    setLoading(false);
+  }, []);
+
+  const storiesList = stories.map((story, idx) => (
+    <StoryItem
+      key={idx}
+      imageUrl={story.profile_picture}
+      text={story.profile_name}
+    />
+  ));
+
+  return (
+    <section className="stories">
+      {!loading && stories.length > 0 ? storiesList : "loading..."}
+    </section>
+  );
+};
 
 export default Stories;
