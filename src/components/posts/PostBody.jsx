@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Moment from "react-moment";
 
 import { ReactComponent as HeartIcon } from "../../assets/icons/heart.svg";
@@ -11,10 +12,21 @@ const PostBody = ({
     imageUrl: "",
     instaHandle: "zak_sheve2",
     likes: 22,
-    comment: "watch this space for something awesome",
+    comments: [{ username: "arvid34", text: "Alice." }],
     date: "1976-04-19T12:59-0500",
   },
 }) => {
+  const comments = post.comments?.map((comment, idx) => (
+    <div className="comment" key={idx}>
+      <div className="handle">
+        <h5>{comment.username}</h5>
+      </div>
+      <div className="comment__text">
+        <p>{comment.text}</p>
+      </div>
+    </div>
+  ));
+
   return (
     <div className="posts-body">
       <div className="posts-body__image">
@@ -35,14 +47,7 @@ const PostBody = ({
           <div className="likes">
             <h5>{post.likes} likes</h5>
           </div>
-          <div className="comment">
-            <div className="handle">
-              <h5>{post.instaHandle}</h5>
-            </div>
-            <div className="comment__text">
-              <p>{post.comment}</p>
-            </div>
-          </div>
+          {comments}
           <div className="time">
             <h5>
               <Moment fromNow>{post.date}</Moment>
@@ -52,6 +57,10 @@ const PostBody = ({
       </div>
     </div>
   );
+};
+
+PostBody.propTypes = {
+  post: PropTypes.object,
 };
 
 export default PostBody;
