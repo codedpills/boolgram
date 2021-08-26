@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 `yarn start` - to start the development server
+
 `yarn build` - to run production build for deployment
 
 ## Demo
