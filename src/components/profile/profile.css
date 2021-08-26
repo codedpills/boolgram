@@ -1,0 +1,42 @@
+.profile_ {
+  padding: 0.3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile__info img {
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+
+.profile__info .text p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--custom-accent-text-main);
+  margin: 5px 0;
+}
+
+.profile__info .text h5 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.profile__link {
+  width: 20%;
+  text-align: right;
+}
+
+.profile__link a {
+  color: var(--custom-link-blue);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
